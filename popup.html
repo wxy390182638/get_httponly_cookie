@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HTTP-only Cookie获取器</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 400px;
+      margin: 0;
+      padding: 10px;
+    }
+    h1 {
+      font-size: 18px;
+      color: #4285f4;
+      margin-top: 0;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    .cookie-container {
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px;
+    }
+    .cookie-item {
+      border-bottom: 1px solid #eee;
+      padding: 5px 0;
+    }
+    .cookie-item:last-child {
+      border-bottom: none;
+    }
+    .cookie-name {
+      font-weight: bold;
+      color: #4285f4;
+    }
+    .cookie-value {
+      word-break: break-all;
+      font-family: monospace;
+      background-color: #f5f5f5;
+      padding: 2px 4px;
+      border-radius: 2px;
+      margin-top: 2px;
+    }
+    .cookie-details {
+      font-size: 12px;
+      color: #666;
+      margin-top: 2px;
+    }
+    .http-only {
+      color: #d93025;
+      font-weight: bold;
+    }
+    .secure {
+      color: #188038;
+      font-weight: bold;
+    }
+    .auth-related {
+      color: #f57c00;
+      font-weight: bold;
+    }
+    .no-cookies {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+    .status {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+      text-align: center;
+    }
+    .error {
+      color: #d93025;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTTP-only Cookie获取器</h1>
+  
+  <div class="buttons">
+    <button id="getHttpOnly">获取HTTP-only Cookie</button>
+    <button id="copyHttpOnly">复制HTTP-only Cookie</button>
+  </div>
+  
+  <div class="cookie-container" id="httpOnlyContainer">
+    <div class="no-cookies">点击"获取HTTP-only Cookie"按钮获取数据</div>
+  </div>
+  
+  <div class="status" id="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
